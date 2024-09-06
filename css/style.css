@@ -260,7 +260,7 @@ color:white;
   position: absolute;
     top: -154px;
     right: 0;
-    width: 615px;
+    /* width: 615px; */
     height: 400px;
     z-index: 1000;
 }
