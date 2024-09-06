@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Offered Section</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .technology-card {
+            cursor: pointer;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .technology-card:hover {
+            background-color: #f8f9fa;
+        }
+        .description {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container mt-5">
+        <div class="row">
+            <!-- Column 1: Technology List -->
+            <div class="col-md-4">
+                <div class="row">
+                    <!-- Technology Cards -->
+                    <div class="col-md-6 mb-3">
+                        <div class="technology-card" data-tech="tech1">
+                            Technology 1
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="technology-card" data-tech="tech2">
+                            Technology 2
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="technology-card" data-tech="tech3">
+                            Technology 3
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="technology-card" data-tech="tech4">
+                            Technology 4
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 2: Description -->
+            <div class="col-md-8">
+                <div class="description" id="tech-description">
+                    <!-- Description will be populated here based on selection -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const techCards = document.querySelectorAll('.technology-card');
+        const descriptionDiv = document.getElementById('tech-description');
+
+        const descriptions = {
+            tech1: "Description for Technology 1. This technology is used for...",
+            tech2: "Description for Technology 2. This technology offers...",
+            tech3: "Description for Technology 3. Benefits of this technology include...",
+            tech4: "Description for Technology 4. Features of this technology are..."
+        };
+
+        techCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const techKey = card.getAttribute('data-tech');
+                descriptionDiv.innerHTML = descriptions[techKey];
+            });
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
