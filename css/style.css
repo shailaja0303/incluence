@@ -743,6 +743,34 @@ color:#fff;
 
 
 /* Responsive Styles */
+@media (max-width: 600px) {
+  .footer {
+    padding: 20px; /* Reduce padding for mobile devices */
+    text-align: center; /* Center-align text and content */
+  }
+
+  .footer-column {
+    margin-bottom: 30px; /* Add space between columns */
+  }
+
+  .footer-logo img {
+    max-width: 120px; /* Adjust logo size for smaller screens */
+  }
+
+  .footer-links {
+    padding: 0; /* Remove padding */
+    margin: 0 auto; /* Center-align links */
+    text-align: center; /* Center-align links text */
+  }
+
+  .footer-address {
+    text-align: center; /* Center-align address text */
+  }
+
+  .footer-address br {
+    display: none; /* Hide line breaks to prevent unnecessary spacing */
+  }
+}
 
 /* Mobile devices ≤600px */
 @media (max-width: 600px) {
